@@ -199,7 +199,11 @@
 
   </div>
 
-<div class="chatbot">
+<div class="chat-toggle" onclick="toggleChat()">
+  💬
+</div>
+
+<div class="chatbot" id="chatbot">
   <div class="chat-header">ThierryBot</div>
 
   <div class="chat-messages" id="chatMessages">
@@ -278,10 +282,42 @@
   padding:12px 16px;
   cursor:pointer;
 }
+  .chat-toggle{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:60px;
+  height:60px;
+  background:black;
+  color:white;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:28px;
+  cursor:pointer;
+  box-shadow:0 5px 20px rgba(0,0,0,0.2);
+  z-index:1000;
+}
+
+.chatbot{
+  position:fixed;
+  bottom:90px;
+  right:20px;
+  width:300px;
+  background:white;
+  border-radius:15px;
+  box-shadow:0 5px 25px rgba(0,0,0,0.15);
+  overflow:hidden;
+  font-family:Arial;
+
+  display:none;
+}
 </style>
 
 <script>
 function sendMessage(){
+  
 
   const input = document.getElementById("userInput");
   const messages = document.getElementById("chatMessages");
@@ -313,6 +349,16 @@ function sendMessage(){
   input.value = "";
 
   messages.scrollTop = messages.scrollHeight;
+}
+  function toggleChat(){
+
+  const chat = document.getElementById("chatbot");
+
+  if(chat.style.display === "block"){
+    chat.style.display = "none";
+  } else {
+    chat.style.display = "block";
+  }
 }
 </script>
   
