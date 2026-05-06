@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thierry</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:#f4f4f4;
+      color:#111;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px;
+    }
+
+    .container{
+      width:100%;
+      max-width:900px;
+      background:white;
+      border-radius:20px;
+      padding:60px;
+      box-shadow:0 10px 40px rgba(0,0,0,0.08);
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:80px;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      letter-spacing:2px;
+    }
+
+    nav{
+      display:flex;
+      gap:30px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#444;
+      font-size:15px;
+      transition:0.2s;
+    }
+
+    nav a:hover{
+      color:black;
+    }
+
+    .hero{
+      display:flex;
+      flex-direction:column;
+      gap:25px;
+    }
+
+    .hero h1{
+      font-size:64px;
+      line-height:1.1;
+      max-width:600px;
+    }
+
+    .hero p{
+      color:#666;
+      font-size:18px;
+      line-height:1.6;
+      max-width:600px;
+    }
+      .logo-container{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-img{
+  width:100px;
+  height:100px;
+  object-fit:contain;
+  margin-top:-2px;
+}
+
+    .buttons{
+      display:flex;
+      gap:15px;
+      margin-top:10px;
+    }
+
+    .btn{
+      padding:14px 24px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:bold;
+      transition:0.2s;
+    }
+
+    .btn-primary{
+      background:black;
+      color:white;
+    }
+
+    .btn-primary:hover{
+      opacity:0.9;
+    }
+
+    .btn-secondary{
+      border:1px solid #ccc;
+      color:#111;
+      background:white;
+    }
+
+    .btn-secondary:hover{
+      background:#f2f2f2;
+    }
+
+    footer{
+      margin-top:80px;
+      color:#777;
+      font-size:14px;
+      border-top:1px solid #eee;
+      padding-top:25px;
+    }
+
+    @media(max-width:700px){
+
+      .container{
+        padding:35px;
+      }
+
+      header{
+        flex-direction:column;
+        gap:25px;
+      }
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      nav{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .buttons{
+        flex-direction:column;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <div class="logo-container">
+  <img src="titi.png" alt="Logo Thierry" class="logo-img">
+  <div class="logo">THIERRY</div>
+      </div>
+
+      <nav>
+        <a href="#">Accueil</a>
+        <a href="#">Services</a>
+        <a href="#">Projets</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Rocker. Moderne. Efficace. Puriste.</h1>
+
+      <p>
+        Bienvenue sur Thierry, une interface simple et élégante pensée
+        pour aller droit au but. Un design épuré, rapide et agréable à utiliser.
+      </p>
+
+      <div class="buttons">
+        <a href="#" class="btn btn-primary">Découvrir</a>
+        <a href="#" class="btn btn-secondary">En savoir plus</a>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Thierry — Tous droits réservés
+    </footer>
+
+  </div>
+
+</body>
+</html>
