@@ -353,6 +353,9 @@ function sendMessage(){
   function toggleChat(){
 
   const chat = document.getElementById("chatbot");
+  const sound = document.getElementById("chatSound");
+
+  sound.play();
 
   if(chat.style.display === "block"){
     chat.style.display = "none";
@@ -368,6 +371,8 @@ function sendMessage(){
 
 }
 </script>
+
+  <audio id="chatSound" src="son.wav"></audio>
   
 </body>
 </html>
